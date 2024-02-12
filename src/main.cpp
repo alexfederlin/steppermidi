@@ -14,6 +14,8 @@ const long gmtOffset_sec = 3600;
 const int daylightOffset_sec = 3600;
 
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
+#include <secrets.h>
+
 
 
 // Create and bind the MIDI interface to the default hardware Serial port
