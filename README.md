@@ -1,11 +1,25 @@
 # Steppermidi
-Simple way to play midi on a stepper motor
+Simple way to play midi on a stepper motor.
+
+## Motivation
+There are a lot of projects that make Musik with Arduino and a Stepper motor.
+- https://www.instructables.com/Make-Music-With-Stepper-Motors/
+- https://projecthub.arduino.cc/JonJonKayne/arduino-midi-stepper-synth-162864 (this one even controls multiple motors)
+- https://github.com/jzkmath/Arduino-MIDI-Stepper-Motor-Instrument
+
+But somehow they all use some roundabout way of getting MIDI to the Microcontroller (or so I felt). I wanted a CLI based approach on a linux PC which would allow me play any MIDI file to the Microcontroller. So I did some digging...
+
 
 ## Needed Hardware
 - ESP32 or similar
 - A4988 stepper motor driver
 - stepper motor
 - power supply for stepper motor
+
+Check e.g. the following resourced for a minimal HW setup: 
+- https://www.engineersgarage.com/nodemcu-esp8266-stepper-motor-interfacing/
+- https://www.pololu.com/picture/view/0J3360
+
 
 # What does it do?
 The ESP32 is using the Midi library to listen to Midi data coming in through the serial port (i.e. USB connected to your PC)
