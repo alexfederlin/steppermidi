@@ -32,7 +32,8 @@ It will then drive the stepper motor to produce the note required by the Midi da
 - blinks LED
 
 ## Constraints
-There is only one channel supported. If you have a midi file with multiple channel, you need to filter out the channel beforehand and stream that to the ESP
+There is only one channel supported. If you have a midi file with multiple channel, you need to filter out the channel beforehand and stream that to the ESP. If you have a midi with multiple channels the playback will sound strange.
+In part this is due to the extremely rudimentary and blocking implementation of playing the notes. This could be handled much more elegantly, possibly even by simply using this library: https://github.com/daniel-centore/arduino-tone-library
 
 # How to do it
 
