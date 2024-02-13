@@ -38,11 +38,11 @@ There is only one channel supported. If you have a midi file with multiple chann
 
 ## On the PC
 ### Prepare your MIDI file.
-You can use timidity to quieten unwanted tracks and output the result to a file
+You can use _timidity_ to quieten unwanted tracks and output the result to a file
 ```timidity -OmM -o imperialmarch_trumpet.mid -Q 1,2,3,4,6,7,8,9,10,11,12,13,14 Downloads/imperialmarch.mid```
 
 ### Prepare the MIDI out via serial
-- Download ttymidi from https://code.launchpad.net/~ttymidi-team/ttymidi/trunk (using bzr)
+- Download _ttymidi_ from https://code.launchpad.net/~ttymidi-team/ttymidi/trunk (using bzr)
 - build it (just “make” in the directory)
 
 Use ttymidi to create an ALSA port which is bound to a Serial Device /dev/ttyUSB0
@@ -50,6 +50,8 @@ Use ttymidi to create an ALSA port which is bound to a Serial Device /dev/ttyUSB
 ```./ttymidi -v -s /dev/ttyUSB0 -n myweirdcontroller```
 
 ### Play MIDI via Serial
+Use _pmidi_ to play the MIDI file via the serial port.
+
 Check which ports are available to play to 
 ```
     pmidi -l
